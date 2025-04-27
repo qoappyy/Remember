@@ -20,7 +20,7 @@ const speechContainer = document.getElementById('speech-container');
 const speechText = document.getElementById('speech-text');
 const bitmoji = document.getElementById('bitmoji');
 
-// Wenn Text vorhanden -> Sprechblase anzeigen
+// Wenn Text vorhanden -> Sprechblase anzeigen und Text setzen
 if (text) {
   speechContainer.classList.remove('hidden');
   speechText.textContent = decodeURIComponent(text);
