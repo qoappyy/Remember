@@ -13,8 +13,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // URL-Parameter lesen
   const params = new URLSearchParams(window.location.search);
-  const text = params.get('text');
+  let text = params.get('text');
   const img = params.get('img');
+
+  // Ersetze "_" durch Leerzeichen
+  if (text !== null) {
+    text = text.replace(/_/g, ' '); // Hier ersetzen wir alle "_" durch Leerzeichen
+  }
 
   // Elemente greifen
   const container = document.getElementById('container');
