@@ -17,8 +17,8 @@ body, html {
 
 #headline {
   margin-top: 20px;
-  width: 60%;
-  max-width: 300px;
+  font-size: 2em;
+  color: #333;
 }
 
 #speech-container {
