@@ -16,14 +16,27 @@ const text = params.get('text');
 const img = params.get('img');
 
 // Elemente greifen
-const speechContainer = document.getElementById('speech-container');
-const speechText = document.getElementById('speech-text');
+const container = document.getElementById('container');
 const bitmoji = document.getElementById('bitmoji');
 
-// Wenn Text vorhanden -> Sprechblase anzeigen und Text setzen
+// Wenn Text vorhanden -> Sprechblase dynamisch erstellen
 if (text) {
-  speechContainer.classList.remove('hidden');
+  const speechContainer = document.createElement('div');
+  speechContainer.id = 'speech-container';
+
+  const speechBubble = document.createElement('img');
+  speechBubble.id = 'speech-bubble';
+  speechBubble.src = 'img/Speechbubble.png';
+  speechBubble.alt = 'Sprechblase';
+
+  const speechText = document.createElement('div');
+  speechText.id = 'speech-text';
   speechText.textContent = decodeURIComponent(text);
+
+  speechContainer.appendChild(speechBubble);
+  speechContainer.appendChild(speechText);
+
+  container.insertBefore(speechContainer, bitmoji);
 }
 
 // Wenn Bild-Index vorhanden -> entsprechendes Bitmoji setzen
