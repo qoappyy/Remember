@@ -28,24 +28,25 @@ body, html {
   width: 80%;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block; /* Flex entfernt, da wir absolute Positionierung verwenden */
 }
 
 #speech-bubble {
   width: 100%;
+  display: block;
+  max-width: 100%; /* optional: wenn die Sprechblase größer als der Text sein soll */
 }
 
 #speech-text {
   position: absolute;
-  top: 20%;
-  left: 10%;
-  right: 10%;
-  text-align: center;
+  top: 50%;        /* Vertikal zentrieren */
+  left: 50%;       /* Horizontal zentrieren */
+  transform: translate(-50%, -50%); /* Korrektur durch Übersetzen um 50% des Textes */
   font-size: 1.2em;
+  text-align: center;
   word-wrap: break-word;
   overflow-wrap: break-word;
+  color: black;    /* Textfarbe anpassen */
 }
 
 #bitmoji {
