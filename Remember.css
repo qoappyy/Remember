@@ -5,7 +5,7 @@ body, html {
   height: 100%;
   background-color: #ffe4e1; /* helles rosa */
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 #container {
@@ -17,8 +17,9 @@ body, html {
 
 #headline {
   margin-top: 20px;
-  font-size: 2em;
+  font-size: 2.5em;
   color: #333;
+  text-align: center;
 }
 
 #speech-container {
@@ -52,7 +53,7 @@ body, html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 50vw; /* Hälfte der Bildschirmbreite */
+  width: 50vw;
 }
 
 .hidden {
