@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const speechBubble = document.createElement('img');
     speechBubble.id = 'speech-bubble';
-    speechBubble.src = 'img/Speechbubble.png';
+    speechBubble.src = 'img/Speechbubble.PNG';
     speechBubble.alt = 'Sprechblase';
 
     const speechText = document.createElement('div');
